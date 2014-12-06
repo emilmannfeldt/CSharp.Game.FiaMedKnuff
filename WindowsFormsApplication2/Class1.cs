@@ -7,19 +7,24 @@ using System.Windows.Forms;
 
 namespace Fiamedknuff
 {
-    class player
+    public class player
     {
        
-        public player(string _name, int _homex, int _homey, PictureBox[] _pieces)
+        public player(int _f, string _name, int _homex, int _homey, PictureBox[] _pieces)
         {
-
-           string name = _name;
-           int homex = _homex;
-            int  homey = _homey;
-           PictureBox[] pieces = _pieces;
+            this.f = _f;
+           this.name = _name;
+           this.homex = _homex;
+            this.homey = _homey;
+           this.pieces = _pieces;
 
         }
         public int homex { get; set; }
+        public player()
+        {
+
+        }
+        public int f { get; set; }
         public int homey { get; set; }
         public string name { get; set; }
         public PictureBox[] pieces { get; set; }

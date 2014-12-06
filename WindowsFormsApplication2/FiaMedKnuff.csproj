@@ -79,6 +79,39 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluepiece.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenpiece.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ludo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redpiece.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowpiece.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
