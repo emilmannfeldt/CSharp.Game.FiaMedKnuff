@@ -21,29 +21,37 @@ namespace Fiamedknuff
             InitializeComponent();
             createplayers();
             disablepieces();
-            Console.WriteLine("test");
-                Console.WriteLine(activeplayers.Count());
+            TurnLabel.ForeColor = System.Drawing.Color.Red;
+            TurnLabel.Text = activeplayers[i].name;
+
         }
 
       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            changeturn();
             foreach (PictureBox b in activeplayers[i].pieces)
             {
                 b.Enabled = true;
             }
             
             dice=throwdice();
-            if (i+1 < activeplayers.Count())
+            if (dice < 6)
             {
-                i++;
+                if (i + 1 < activeplayers.Count())
+                {
+                    i++;
+                }
+                else
+                {
+                    i = 0;
+                }
             }
-            else
-            {
-                i = 0;
-            }
+             
+            
+        
+         
           
         }
 
@@ -58,16 +66,16 @@ namespace Fiamedknuff
         private void createplayers()
         {
             PictureBox[] player1pieces = new PictureBox[] { player1piece1, player1piece2, player1piece3, player1piece4 };
-            activeplayers.Add( new player(0,"john",137,87,player1pieces));
+            activeplayers.Add( new player(0,"Röd",137,87,player1pieces));
 
             PictureBox[] player2pieces = new PictureBox[] { player2piece1, player2piece2, player2piece3, player2piece4 };
-            activeplayers.Add(new player(0,"adam", 450, 87, player2pieces));
+            activeplayers.Add(new player(0,"Gul", 450, 87, player2pieces));
 
             PictureBox[] player4pieces = new PictureBox[] { player4piece1, player4piece2, player4piece3, player4piece4 };
-            activeplayers.Add(new player(0,"jen", 450, 405, player4pieces));
+            activeplayers.Add(new player(0,"Grön", 450, 405, player4pieces));
 
             PictureBox[] player3pieces = new PictureBox[] { player3piece1, player3piece2, player3piece3, player3piece4 };
-            activeplayers.Add(new player(0,"jens", 137, 405, player3pieces));
+            activeplayers.Add(new player(0,"Blå", 137, 405, player3pieces));
  
             
         }
@@ -201,6 +209,8 @@ namespace Fiamedknuff
             }
             checkpush(pb, p);
             disablepieces();
+            DiceBox.Image = Fiamedknuff.Properties.Resources.dice;
+            changeturn();
 
 
         }
@@ -225,6 +235,14 @@ namespace Fiamedknuff
                 }
                 if (dice > 0)
                 {
+                    if (pb.Location.Y > 315 && pb.Location.X.Equals(324))
+                    {
+                        moveup(pb);
+                        if (pb.Location.Y.Equals(316))
+                        {
+                            goal(pb, p); //win move to winning spot. check if all p.pieces is at winning spot. if so, winner!
+                        }
+                    }
                     movearound(pb);
                 }
 
@@ -232,6 +250,8 @@ namespace Fiamedknuff
             }
             checkpush(pb, p);
             disablepieces();
+            DiceBox.Image = Fiamedknuff.Properties.Resources.dice;
+            changeturn();
 
 
         }
@@ -256,6 +276,14 @@ namespace Fiamedknuff
                 }
                 if (dice > 0)
                 {
+                    if (pb.Location.X > 361 && pb.Location.Y.Equals(278))
+                    {
+                        moveleft(pb);
+                        if (pb.Location.X.Equals(362))
+                        {
+                            goal(pb, p); //win move to winning spot. check if all p.pieces is at winning spot. if so, winner!
+                        }
+                    }
                     movearound(pb);
                 }
 
@@ -263,6 +291,8 @@ namespace Fiamedknuff
             }
             checkpush(pb, p);
             disablepieces();
+            DiceBox.Image = Fiamedknuff.Properties.Resources.dice;
+            changeturn();
 
 
         }
@@ -287,6 +317,14 @@ namespace Fiamedknuff
                 }
                 if (dice > 0)
                 {
+                    if (pb.Location.Y < 241 && pb.Location.X.Equals(324))
+                    {
+                        movedown(pb);
+                        if (pb.Location.Y.Equals(240))
+                        {
+                            goal(pb, p); //win move to winning spot. check if all p.pieces is at winning spot. if so, winner!
+                        }
+                    }
                     movearound(pb);
                 }
 
@@ -294,13 +332,43 @@ namespace Fiamedknuff
             }
             checkpush(pb, p);
             disablepieces();
+            DiceBox.Image = Fiamedknuff.Properties.Resources.dice;
+            changeturn();
 
 
+        }
+
+        private void changeturn()
+        {
+            
+            if (i == 0)
+            {
+                TurnLabel.ForeColor = System.Drawing.Color.Red;
+               
+                
+            }
+            if (i == 1)
+            {
+                TurnLabel.ForeColor = System.Drawing.Color.FromArgb(220, 220, 0);
+                
+            }
+            if (i == 2)
+            {
+                TurnLabel.ForeColor = System.Drawing.Color.Green;
+                
+            }
+            if (i == 3)
+            {
+                TurnLabel.ForeColor = System.Drawing.Color.Blue;
+               
+            }
+            TurnLabel.Text = activeplayers[i].name;
         }
 
         //moves around table
         private void movearound(PictureBox pb)
         {
+  
             if (pb.Location.X.Equals(286) && pb.Location.Y > 280)
             {
                 if (pb.Location.Y.Equals(316))
@@ -457,6 +525,7 @@ namespace Fiamedknuff
                 }
 
             }
+            
         }
         private void moveup(PictureBox pb)
         {
@@ -508,6 +577,57 @@ namespace Fiamedknuff
         private void endgame(player pl)
         {
             
+        }
+
+        private void Player3Text_TextChanged(object sender, EventArgs e)
+        {
+            string te1 = Player3Text.Text.TrimStart();
+            if (te1.Length < 10)
+            {
+                if (!string.IsNullOrWhiteSpace(Player3Text.Text))
+                {
+                    activeplayers[2].name = te1;
+                }
+            }
+        }
+
+        private void Player1Text_TextChanged(object sender, EventArgs e)
+        {
+            string te2 = Player1Text.Text.TrimStart();
+            if (te2.Length < 10)
+            {
+                if (!string.IsNullOrWhiteSpace(Player1Text.Text))
+                {
+                    activeplayers[0].name = te2;
+                }
+            }
+        }
+
+        private void Player2Text_TextChanged(object sender, EventArgs e)
+        {
+            string te3 = Player2Text.Text.TrimStart();
+            if (te3.Length < 10)
+            {
+            if (!string.IsNullOrWhiteSpace(Player2Text.Text))
+            {
+                activeplayers[1].name = te3;
+
+            }
+          }
+        }
+
+        private void Player4Text_TextChanged(object sender, EventArgs e)
+        {
+            string te4 = Player4Text.Text.TrimStart();
+            if (te4.Length < 10)
+            {
+                if (!string.IsNullOrWhiteSpace(Player4Text.Text))
+                {
+                    activeplayers[3].name = te4;
+                }
+            }
+          
+           
         }
 
     }

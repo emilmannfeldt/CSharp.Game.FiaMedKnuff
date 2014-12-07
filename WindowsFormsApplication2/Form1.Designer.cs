@@ -46,6 +46,16 @@
             this.player3piece3 = new System.Windows.Forms.PictureBox();
             this.player3piece4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TurnLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Player2Text = new System.Windows.Forms.TextBox();
+            this.Player1Text = new System.Windows.Forms.TextBox();
+            this.Player4Text = new System.Windows.Forms.TextBox();
+            this.Player3Text = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DiceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1piece2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1piece4)).BeginInit();
@@ -69,7 +79,7 @@
             // DiceBox
             // 
             this.DiceBox.BackColor = System.Drawing.Color.Transparent;
-            this.DiceBox.Image = global::Fiamedknuff.Properties.Resources.dice6;
+            this.DiceBox.Image = global::Fiamedknuff.Properties.Resources.dice;
             this.DiceBox.Location = new System.Drawing.Point(313, 298);
             this.DiceBox.Name = "DiceBox";
             this.DiceBox.Size = new System.Drawing.Size(67, 58);
@@ -274,12 +284,116 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Fiamedknuff.Properties.Resources.yellowpiece;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 590);
+            this.pictureBox1.Location = new System.Drawing.Point(324, 552);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
+            // 
+            // TurnLabel
+            // 
+            this.TurnLabel.AutoSize = true;
+            this.TurnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TurnLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TurnLabel.Location = new System.Drawing.Point(76, -2);
+            this.TurnLabel.Name = "TurnLabel";
+            this.TurnLabel.Size = new System.Drawing.Size(63, 31);
+            this.TurnLabel.TabIndex = 23;
+            this.TurnLabel.Text = "test";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(-1, -2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 31);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Turn:";
+            // 
+            // Player2Text
+            // 
+            this.Player2Text.Location = new System.Drawing.Point(450, 223);
+            this.Player2Text.Name = "Player2Text";
+            this.Player2Text.Size = new System.Drawing.Size(110, 20);
+            this.Player2Text.TabIndex = 25;
+            this.Player2Text.TextChanged += new System.EventHandler(this.Player2Text_TextChanged);
+            // 
+            // Player1Text
+            // 
+            this.Player1Text.Location = new System.Drawing.Point(137, 223);
+            this.Player1Text.Name = "Player1Text";
+            this.Player1Text.Size = new System.Drawing.Size(105, 20);
+            this.Player1Text.TabIndex = 26;
+            this.Player1Text.TextChanged += new System.EventHandler(this.Player1Text_TextChanged);
+            // 
+            // Player4Text
+            // 
+            this.Player4Text.Location = new System.Drawing.Point(137, 541);
+            this.Player4Text.Name = "Player4Text";
+            this.Player4Text.Size = new System.Drawing.Size(105, 20);
+            this.Player4Text.TabIndex = 27;
+            this.Player4Text.TextChanged += new System.EventHandler(this.Player4Text_TextChanged);
+            // 
+            // Player3Text
+            // 
+            this.Player3Text.Location = new System.Drawing.Point(450, 541);
+            this.Player3Text.Name = "Player3Text";
+            this.Player3Text.Size = new System.Drawing.Size(110, 20);
+            this.Player3Text.TabIndex = 28;
+            this.Player3Text.TextChanged += new System.EventHandler(this.Player3Text_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(134, 246);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(447, 246);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 17);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(134, 564);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 17);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(447, 564);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Name";
             // 
             // Form1
             // 
@@ -288,6 +402,16 @@
             this.BackgroundImage = global::Fiamedknuff.Properties.Resources.ludo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(690, 654);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Player3Text);
+            this.Controls.Add(this.Player4Text);
+            this.Controls.Add(this.Player1Text);
+            this.Controls.Add(this.Player2Text);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TurnLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.player3piece4);
             this.Controls.Add(this.player3piece3);
@@ -327,6 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.player3piece4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -350,6 +475,16 @@
         private System.Windows.Forms.PictureBox player3piece3;
         private System.Windows.Forms.PictureBox player3piece4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label TurnLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Player2Text;
+        private System.Windows.Forms.TextBox Player1Text;
+        private System.Windows.Forms.TextBox Player4Text;
+        private System.Windows.Forms.TextBox Player3Text;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
