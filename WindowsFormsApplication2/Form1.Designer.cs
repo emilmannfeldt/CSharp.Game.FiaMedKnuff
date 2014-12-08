@@ -152,7 +152,7 @@
             // 
             this.player2piece4.BackColor = System.Drawing.Color.Transparent;
             this.player2piece4.Image = global::Fiamedknuff.Properties.Resources.yellowpiece;
-            this.player2piece4.Location = new System.Drawing.Point(522, 155);
+            this.player2piece4.Location = new System.Drawing.Point(517, 155);
             this.player2piece4.Name = "player2piece4";
             this.player2piece4.Size = new System.Drawing.Size(38, 62);
             this.player2piece4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -176,7 +176,7 @@
             // 
             this.player2piece2.BackColor = System.Drawing.Color.Transparent;
             this.player2piece2.Image = global::Fiamedknuff.Properties.Resources.yellowpiece;
-            this.player2piece2.Location = new System.Drawing.Point(522, 87);
+            this.player2piece2.Location = new System.Drawing.Point(517, 87);
             this.player2piece2.Name = "player2piece2";
             this.player2piece2.Size = new System.Drawing.Size(38, 62);
             this.player2piece2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +200,7 @@
             // 
             this.player4piece2.BackColor = System.Drawing.Color.Transparent;
             this.player4piece2.Image = global::Fiamedknuff.Properties.Resources.greenpiece;
-            this.player4piece2.Location = new System.Drawing.Point(522, 405);
+            this.player4piece2.Location = new System.Drawing.Point(517, 405);
             this.player4piece2.Name = "player4piece2";
             this.player4piece2.Size = new System.Drawing.Size(38, 62);
             this.player4piece2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -224,7 +224,7 @@
             // 
             this.player4piece4.BackColor = System.Drawing.Color.Transparent;
             this.player4piece4.Image = global::Fiamedknuff.Properties.Resources.greenpiece;
-            this.player4piece4.Location = new System.Drawing.Point(522, 473);
+            this.player4piece4.Location = new System.Drawing.Point(517, 473);
             this.player4piece4.Name = "player4piece4";
             this.player4piece4.Size = new System.Drawing.Size(38, 62);
             this.player4piece4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,7 +284,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Fiamedknuff.Properties.Resources.yellowpiece;
-            this.pictureBox1.Location = new System.Drawing.Point(324, 552);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 519);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

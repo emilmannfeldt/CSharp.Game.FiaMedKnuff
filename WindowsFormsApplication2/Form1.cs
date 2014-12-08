@@ -23,6 +23,9 @@ namespace Fiamedknuff
             disablepieces();
             TurnLabel.ForeColor = System.Drawing.Color.Red;
             TurnLabel.Text = activeplayers[i].name;
+            
+            
+          
 
         }
 
@@ -119,11 +122,13 @@ namespace Fiamedknuff
         private void player2piece2_Click(object sender, EventArgs e)
         {
             moveyellow(activeplayers[1], player2piece2);
+            
         }
 
         private void player2piece3_Click(object sender, EventArgs e)
         {
             moveyellow(activeplayers[1], player2piece3);
+           
         }
 
         private void player2piece4_Click(object sender, EventArgs e)
@@ -261,7 +266,7 @@ namespace Fiamedknuff
             while (dice > 0)
             {
                 
-                if (pb.Location.X.Equals(450) || pb.Location.X.Equals(522))
+                if (pb.Location.X.Equals(450) || pb.Location.X.Equals(517))
                 {
                     if (dice == 1)
                     {
@@ -302,7 +307,7 @@ namespace Fiamedknuff
             while (dice > 0)
             {
               
-                if (pb.Location.X.Equals(450) || pb.Location.X.Equals(522))
+                if (pb.Location.X.Equals(450) || pb.Location.X.Equals(517))
                 {
                     if (dice == 1)
                     {
@@ -557,15 +562,63 @@ namespace Fiamedknuff
                 foreach (PictureBox b in c.pieces)
                     if (p.Location.X.Equals(b.Location.X) && p.Location.Y.Equals(b.Location.Y))
                     {
-
+                        
                         b.Location = new Point(c.homex, c.homey);
+                        foreach (PictureBox b2 in c.pieces)
+                        {
+                            if (b2 == b)
+                            {
+                                continue;
+                            }
+                            if (b.Location.X.Equals(b2.Location.X) && b.Location.Y.Equals(b2.Location.Y))
+                            {
+                                b.Location = new Point(c.homex+67,c.homey);
+                            }
+                            foreach (PictureBox b3 in c.pieces)
+                            {
+                                if (b3 == b2)
+                                {
+                                    continue;
+                                }
+                                if (b2.Location.X.Equals(b3.Location.X) && b2.Location.Y.Equals(b3.Location.Y))
+                                {
+                                    b2.Location = new Point(c.homex + 67, c.homey);
+                                }
+
+                            }
+                            foreach (PictureBox b3 in c.pieces)
+                            {
+                                if (b3 == b2)
+                                {
+                                    continue;
+                                }
+                                if (b2.Location.X.Equals(b3.Location.X) && b2.Location.Y.Equals(b3.Location.Y))
+                                {
+                                    b2.Location = new Point(c.homex, c.homey+67);
+                                }
+
+                            }
+                            foreach (PictureBox b3 in c.pieces)
+                            {
+                                if (b3 == b2)
+                                {
+                                    continue;
+                                }
+                                if (b2.Location.X.Equals(b3.Location.X) && b2.Location.Y.Equals(b3.Location.Y))
+                                {
+                                    b2.Location = new Point(c.homex+67, c.homey + 67);
+                                }
+
+                            }
+                        }
 
                     }
             }
         }
         private void goal(PictureBox pb, player pl)
         {
-            winners += 10;
+            
+            winners += 20;
             pb.Location = new Point(1+winners, 590);
             pl.f += 1;
             if (pl.f == 4)
@@ -576,7 +629,25 @@ namespace Fiamedknuff
 
         private void endgame(player pl)
         {
-            
+            DialogResult dialogResult = MessageBox.Show("Grattis "+pl.name+"!! \n klicka 'ok' för att spela en ny runda", "Spelrunda avslutad", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+
+                restartgame();
+            }
+            else if (dialogResult == DialogResult.Cancel)
+            {
+                
+            }
+        }
+
+        private void restartgame()
+        {
+            i = 0;
+            winners = 0;
+            this.Controls.Clear();
+            this.InitializeComponent();
+            changeturn();
         }
 
         private void Player3Text_TextChanged(object sender, EventArgs e)
@@ -629,6 +700,7 @@ namespace Fiamedknuff
           
            
         }
+
 
     }
 }
