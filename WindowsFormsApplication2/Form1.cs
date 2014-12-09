@@ -348,6 +348,7 @@ namespace Fiamedknuff
             
             if (i == 0)
             {
+                
                 TurnLabel.ForeColor = System.Drawing.Color.Red;
                
                 

@@ -142,9 +142,6 @@
   <data name="greenpiece" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\greenpiece.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ludo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ludo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="redpiece" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redpiece.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,5 +150,8 @@
   </data>
   <data name="dice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ludo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ludo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

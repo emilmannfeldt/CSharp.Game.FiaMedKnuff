@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.DiceBox = new System.Windows.Forms.PictureBox();
             this.player1piece2 = new System.Windows.Forms.PictureBox();
             this.player1piece4 = new System.Windows.Forms.PictureBox();
@@ -399,8 +400,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Fiamedknuff.Properties.Resources.ludo;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(690, 654);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -430,6 +431,8 @@
             this.Controls.Add(this.player1piece4);
             this.Controls.Add(this.player1piece2);
             this.Controls.Add(this.DiceBox);
+            this.MaximumSize = new System.Drawing.Size(706, 692);
+            this.MinimumSize = new System.Drawing.Size(706, 692);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DiceBox)).EndInit();
